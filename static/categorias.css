@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.nav-left .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #e63946;
+}
+
+.categorias {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.categorias h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.grid-categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 0 2rem;
+}
+
+.categoria {
+  background-color: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.categoria:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.categoria i {
+  width: 36px;
+  height: 36px;
+  color: #e63946;
+  margin-bottom: 1rem;
+}
+
+.categoria h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.lista-peliculas {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.lista-peliculas.visible {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.lista-peliculas li {
+  padding: 0.4rem 0;
+  color: #555;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.lista-peliculas li:hover {
+  color: #e63946;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  border-top: 1px solid #eee;
+  margin-top: 3rem;
+  color: #777;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sienna - Categorías</title>
+  <link rel="stylesheet" href="/static/categorias.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-left">
+        <a href="index.html" class="logo">Sienna</a>
+      </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="categorias.html" class="active">Categorías</a></li>
+        <li><a href="#carrito">Carrito</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="categorias">
+      <h2>Explora por Categorías</h2>
+      <div class="grid-categorias">
+        <div class="categoria" onclick="toggleList('accion')">
+          <i data-lucide="film"></i>
+          <h3>Acción</h3>
+          <ul id="accion" class="lista-peliculas">
+            <li>Mad Max: Fury Road</li>
+            <li>John Wick</li>
+            <li>Die Hard</li>
+            <li>Gladiator</li>
+            <li>The Dark Knight</li>
+            <li>Inception</li>
+            <li>Mission Impossible</li>
+            <li>Skyfall</li>
+            <li>Terminator 2</li>
+            <li>Black Panther</li>
+          </ul>
+        </div>
+
+        <div class="categoria" onclick="toggleList('romance')">
+          <i data-lucide="heart"></i>
+          <h3>Romance</h3>
+          <ul id="romance" class="lista-peliculas">
+            <li>Pride & Prejudice</li>
+            <li>La La Land</li>
+            <li>The Notebook</li>
+            <li>Titanic</li>
+            <li>500 Days of Summer</li>
+            <li>Call Me by Your Name</li>
+            <li>Before Sunrise</li>
+            <li>Her</li>
+            <li>Carol</li>
+            <li>Notting Hill</li>
+          </ul>
+        </div>
+
+        <div class="categoria" onclick="toggleList('terror')">
+          <i data-lucide="ghost"></i>
+          <h3>Terror</h3>
+          <ul id="terror" class="lista-peliculas">
+            <li>Hereditary</li>
+            <li>The Witch</li>
+            <li>It Follows</li>
+            <li>The Babadook</li>
+            <li>Get Out</li>
+            <li>Midsommar</li>
+            <li>The Conjuring</li>
+            <li>Insidious</li>
+            <li>Smile</li>
+            <li>The Others</li>
+          </ul>
+        </div>
+
+        <div class="categoria" onclick="toggleList('comedia')">
+          <i data-lucide="laugh"></i>
+          <h3>Comedia</h3>
+          <ul id="comedia" class="lista-peliculas">
+            <li>Superbad</li>
+            <li>The Hangover</li>
+            <li>Mean Girls</li>
+            <li>21 Jump Street</li>
+            <li>Bridesmaids</li>
+            <li>Palm Springs</li>
+            <li>Game Night</li>
+            <li>Ted</li>
+            <li>Knives Out</li>
+            <li>Yes Man</li>
+          </ul>
+        </div>
+
+        <div class="categoria" onclick="toggleList('drama')">
+          <i data-lucide="drama"></i>
+          <h3>Drama</h3>
+          <ul id="drama" class="lista-peliculas">
+            <li>Parasite</li>
+            <li>Whiplash</li>
+            <li>Moonlight</li>
+            <li>The Social Network</li>
+            <li>Joker</li>
+            <li>12 Years a Slave</li>
+            <li>Nomadland</li>
+            <li>The Whale</li>
+            <li>Room</li>
+            <li>Manchester by the Sea</li>
+          </ul>
+        </div>
+
+        <div class="categoria" onclick="toggleList('scifi')">
+          <i data-lucide="rocket"></i>
+          <h3>Ciencia Ficción</h3>
+          <ul id="scifi" class="lista-peliculas">
+            <li>Blade Runner 2049</li>
+            <li>Arrival</li>
+            <li>Interstellar</li>
+            <li>Ex Machina</li>
+            <li>Inception</li>
+            <li>Dune</li>
+            <li>The Matrix</li>
+            <li>Tenet</li>
+            <li>District 9</li>
+            <li>Edge of Tomorrow</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Sienna. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    function toggleList(id) {
+      const lista = document.getElementById(id);
+      lista.classList.toggle('visible');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sienna</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/index.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-left">
+        <span class="menu-icon" id="menu-icon">&#9776;</span>
+        <h1 class="logo">Sienna</h1>
+      </div>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="categorias.html">Categorías</a></li>
+        <li><a href="#iniciarSesion">Iniciar sesion</a></li>
+        <li><a href="#login">registro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <aside class="sidebar" id="sidebar">
+    <button class="close-btn" id="close-btn">&times;</button>
+    <ul>
+      <li><a href="#">Series de TV</a></li>
+      <li><a href="#">Películas</a></li>
+      <li><a href="#">Merchandising</a></li>
+      <li><a href="#">Reseñas</a></li>
+      <li><a href="#">Membresías</a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <section id="destacadas">
+      <h2>Películas Disponibles</h2>
+      <div class="carousel">
+        <button class="arrow left">&#10094;</button>
+
+        <div class="movie-card active">
+          <img src="/static/images/midsommar.jpg" alt="Midsommar" />
+          <h3>Midsommar</h3>
+        </div>
+        <div class="movie-card">
+          <img src="/static/images/everything.jpg" alt="Everything Everywhere All at Once" />
+          <h3>Everything Everywhere All at Once</h3>
+        </div>
+        <div class="movie-card">
+          <img src="/static/images/aftersun.jpg" alt="Aftersun" />
+          <h3>Aftersun</h3>
+        </div>
+        <div class="movie-card">
+          <img src="/static/images/strangers.jpg" alt="Strangers" />
+          <h3>Strangers</h3>
+        </div>
+        <div class="movie-card">
+          <img src="/static/images/her.jpg" alt="Her" />
+          <h3>Her</h3>
+        </div>
+
+        <button class="arrow right">&#10095;</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sienna. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // --- Carrusel automático con flechas ---
+    const slides = document.querySelectorAll('.movie-card');
+    const nextButton = document.querySelector('.arrow.right');
+    const prevButton = document.querySelector('.arrow.left');
+    let index = 0;
+
+    function showSlide(newIndex) {
+      slides[index].classList.remove('active');
+      index = (newIndex + slides.length) % slides.length;
+      slides[index].classList.add('active');
+    }
+
+    nextButton.addEventListener('click', () => showSlide(index + 1));
+    prevButton.addEventListener('click', () => showSlide(index - 1));
+
+    // Cambio automático cada 2 segundos
+    setInterval(() => showSlide(index + 1), 2000);
+
+    // --- Menú lateral ---
+    const menuIcon = document.getElementById('menu-icon');
+    const sidebar = document.getElementById('sidebar');
+    const closeBtn = document.getElementById('close-btn');
+
+    menuIcon.addEventListener('click', () => {
+      sidebar.classList.add('open');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+    });
+  </script>
+</body>
+</html>
