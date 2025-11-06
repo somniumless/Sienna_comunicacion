@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; 
+    background-color: #f8f8f8; 
+    color: #111;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #f9f9f9;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #8b5e3c;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: #111;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #8b5e3c;
+}
+
+.menu-icon {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #111;
+    margin-right: 15px;
+}
+
+.sidebar {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    width: 240px;
+    height: 100%;
+    background-color: #111;
+    color: #fff;
+    padding-top: 3rem;
+    transition: left 0.3s ease;
+    z-index: 2000;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 1.5rem 0;
+}
+
+.sidebar ul a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul a:hover {
+    color: #aaa;
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.reviews-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.reviews-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.reviews-header p {
+    color: #666;
+}
+
+.featured-review {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+    border-left: 5px solid #8b5e3c; 
+    text-align: left;
+}
+
+.featured-review h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #8b5e3c;
+}
+
+.review-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ddd;
+    font-size: 0.9rem;
+}
+
+.rating svg {
+    width: 20px;
+    height: 20px;
+    stroke: #ffd700;
+}
+
+.review-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+    font-style: italic; 
+}
+
+.reviewer {
+    display: block;
+    text-align: right;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.all-reviews h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+}
+
+.review-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    border-left: 3px solid #ccc;
+    transition: border-left-color 0.3s;
+}
+
+.review-card:hover {
+    border-left-color: #8b5e3c;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.review-header h4 {
+    font-size: 1.2rem;
+    color: #1a1a1a;
+}
+
+.rating-small {
+    font-weight: 600;
+    color: #ffd700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.review-content {
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.review-footer {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #ddd, rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+    color: #555;
+    font-size: 14px;
+    font-family: 'Playfair Display', serif; 
+}

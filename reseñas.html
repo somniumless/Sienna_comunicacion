@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sienna - Reseñas de Películas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> 
+    
+    <link rel="stylesheet" href="static/reseñas.css" /> 
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="nav-left">
+                <span class="menu-icon" id="menu-icon">&#9776;</span>
+                <h1 class="logo">Sienna</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="categorias.html">Categorías</a></li>
+                <li><a href="inicioSesion.html">Iniciar Sesión</a></li>
+                <li><a href="Registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+        <button class="close-btn" id="close-btn">&times;</button>
+        <ul>
+            <li><a href="series.html">Series</a></li>
+            <li><a href="peliculas.html">Películas</a></li>
+            <li><a href="merchandising.html">Merchandising</a></li>
+            <li><a href="reseñas.html">Reseñas</a></li>
+            <li><a href="membresias.html">Membresías</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <section class="reviews-header">
+            <h2>Reseñas Destacadas de la Comunidad</h2>
+            <p>Lee opiniones honestas sobre tus películas favoritas y comparte las tuyas.</p>
+        </section>
+        
+        <section class="featured-review">
+            <h3>"Dune: Una Obra Maestra Visual y Narrativa"</h3>
+            <div class="review-meta">
+                <span class="movie-title">Dune (2021)</span>
+                <span class="rating">
+                    <i data-lucide="star" fill="#ffd700"></i>
+                    <i data-lucide="star" fill="#ffd700"></i>
+                    <i data-lucide="star" fill="#ffd700"></i>
+                    <i data-lucide="star" fill="#ffd700"></i>
+                    <i data-lucide="star-half" fill="#ffd700"></i>
+                    4.5 / 5
+                </span>
+            </div>
+            <p class="review-text">
+                "Denis Villeneuve ha logrado lo impensable. No solo adaptó la novela imposible de Frank Herbert, sino que creó un mundo inmersivo que se siente vasto y brutal. La cinematografía es arte puro y la banda sonora de Zimmer te envuelve. Es una experiencia de cine que exige ser vista en la pantalla más grande posible."
+            </p>
+            <span class="reviewer">— Por Ana G. (Usuario Verificado)</span>
+        </section>
+
+        <hr class="divider">
+
+        <section class="all-reviews">
+            <h2>Todas las Reseñas</h2>
+            
+            <div class="review-card">
+                <div class="review-header">
+                    <h4>Parasite: Inquietante y Brillante</h4>
+                    <span class="rating-small">4.8 <i data-lucide="star" fill="#ffd700"></i></span>
+                </div>
+                <p class="review-content">"Una sátira social con giros inesperados. Bong Joon-ho mezcla géneros de manera magistral. Absolutamente esencial."</p>
+                <div class="review-footer">
+                    <span>Película: **Parasite**</span> | <span>Usuario: **Javier M.**</span>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <h4>Mad Max: Furia Desatada</h4>
+                    <span class="rating-small">5.0 <i data-lucide="star" fill="#ffd700"></i></span>
+                </div>
+                <p class="review-content">"¡Pura adrenalina de principio a fin! El mejor cine de acción de la década. Imprescindible para ver con buen sonido."</p>
+                <div class="review-footer">
+                    <span>Película: **Mad Max: Fury Road**</span> | <span>Usuario: **Carlos R.**</span>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <h4>The Social Network: Fría pero Fascinante</h4>
+                    <span class="rating-small">4.1 <i data-lucide="star" fill="#ffd700"></i></span>
+                </div>
+                <p class="review-content">"Un diálogo espectacular y un ritmo frenético. Aunque no te interese la tecnología, la historia de ambición es universal."</p>
+                <div class="review-footer">
+                    <span>Película: **The Social Network**</span> | <span>Usuario: **Laura V.**</span>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sienna. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        const menuIcon = document.getElementById('menu-icon');
+        const sidebar = document.getElementById('sidebar');
+        const closeBtn = document.getElementById('close-btn');
+
+        menuIcon.addEventListener('click', () => {
+            sidebar.classList.add('open');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+        });
+    </script>
+</body>
+</html>

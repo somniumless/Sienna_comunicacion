@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sienna - Series de TV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> 
+    
+    <link rel="stylesheet" href="static/series.css" /> 
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="nav-left">
+                <span class="menu-icon" id="menu-icon">&#9776;</span>
+                <h1 class="logo">Sienna</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="categorias.html">Categorías</a></li>
+                <li><a href="inicioSesion.html">Iniciar Sesión</a></li>
+                <li><a href="Registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+        <button class="close-btn" id="close-btn">&times;</button>
+        <ul>
+            <li><a href="series.html">Series</a></li>
+            <li><a href="peliculas.html">Películas</a></li>
+            <li><a href="merchandising.html">Merchandising</a></li>
+            <li><a href="reseñas.html">Reseñas</a></li>
+            <li><a href="membresias.html">Membresías</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <section class="hero-banner">
+            <h2>Series que no puedes dejar de ver</h2>
+            <p>Nuevos episodios y maratones disponibles en alta calidad.</p>
+        </section>
+
+        <section class="movie-row">
+            <h3>Dramas de Fantasía Épica</h3>
+            <div class="movie-carousel">
+                <div class="movie-item">
+                    <img src="static/images/series/GOT.jpg" alt="Game of Thrones" />
+                    <div class="overlay">Game of Thrones</div>
+                </div>
+                <div class="movie-item">
+                    <img src="static/images/series/TheWitcher.jpg" alt="The Witcher" />
+                    <div class="overlay">The Witcher</div>
+                </div>
+                <div class="movie-item">
+                    <img src="static/images/series/RoP.jpg" alt="Rings of Power" />
+                    <div class="overlay">Rings of Power</div>
+                </div>
+                <div class="movie-item">
+                    <img src="static/images/series/Sandman.jpg" alt="The Sandman" />
+                    <div class="overlay">The Sandman</div>
+                </div>
+                <div class="movie-item">
+                    <img src="static/images/series/Wheel.jpg" alt="The Wheel of Time" />
+                    <div class="overlay">The Wheel of Time</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="movie-row">
+            <h3>Comedias de Situación Clásicas</h3>
+            <div class="movie-carousel">
+                <div class="movie-item">
+                    <img src="static/images/series/Friends.jpg" alt="Friends" />
+                    <div class="overlay">Friends</div>
+                </div>
+                <div class="movie-item">
+                    <img src="static/images/series/Office.jpg" alt="The Office" />
+                    <div class="overlay">The Office (US)</div>
+                </div>
+                <div class="movie-item">
+                    <img src="static/images/series/Parks.jpg" alt="Parks and Rec" />
+                    <div class="overlay">Parks and Rec</div>
+                </div>
+                <div class="movie-item">
+                    <img src="static/images/series/Seinfeld.jpg" alt="Seinfeld" />
+                    <div class="overlay">Seinfeld</div>
+                </div>
+                <div class="movie-item">
+                    <img src="static/images/series/HIMYM.jpg" alt="HIMYM" />
+                    <div class="overlay">HIMYM</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="movie-row">
+            <h3>Ciencia Ficción y Thrillers Mentales</h3>
+            <div class="movie-carousel">
+                <div class="movie-item">
+                    <img src="static/images/series/Westworld.jpg" alt="Westworld" />
+                    <div class="overlay">Westworld</div>
+                </div>
+                <div class="movie-item">
+                    <img src="static/images/series/Stranger.jpg" alt="Stranger Things" />
+                    <div class="overlay">Stranger Things</div>
+                </div>
+                <div class="movie-item">
+                    <img src="static/images/series/Black.jpg" alt="Black Mirror" />
+                    <div class="overlay">Black Mirror</div>
+                </div>
+                <div class="movie-item">
+                    <img src="static/images/series/Expanse.jpg" alt="The Expanse" />
+                    <div class="overlay">The Expanse</div>
+                </div>
+                <div class="movie-item">
+                    <img src="static/images/series/Severance.jpg" alt="Severance" />
+                    <div class="overlay">Severance</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sienna. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        const menuIcon = document.getElementById('menu-icon');
+        const sidebar = document.getElementById('sidebar');
+        const closeBtn = document.getElementById('close-btn');
+
+        menuIcon.addEventListener('click', () => {
+            sidebar.classList.add('open');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+        });
+    </script>
+</body>
+</html>
