@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sienna - Merchandising</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="static/merchandising.css" />
+    </head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <span class="menu-icon" id="menu-icon">&#9776;</span>
+                <h1 class="logo">Sienna</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="categorias.html">Categorías</a></li>
+                <li><a href="inicioSesion.html">Iniciar Sesión</a></li>
+                <li><a href="Registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+        <button class="close-btn" id="close-btn">&times;</button>
+        <ul>
+            <li><a href="#">Series de TV</a></li>
+            <li><a href="#">Películas</a></li>
+            <li><a href="merchandising.html">Merchandising</a></li> <li><a href="#">Reseñas</a></li>
+            <li><a href="#">Membresías</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <section id="merchandising-products">
+            <h2>Artículos Exclusivos de Sienna</h2>
+            <div class="products-grid">
+
+                <div class="product-card">
+                    <img src="static/images/Taza.png" alt="Taza Exclusiva de Sienna" />
+                    <h3>Taza Logo Clásico</h3>
+                    <p></p>
+                    <p>Perfecta para tu café matutino mientras ves una película.</p>
+                    <div class="price">$9.99</div>
+                    <a href="#" class="buy-button">Comprar Ahora</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="static/images/Camiseta.png" alt="Camiseta de Midsommar" />
+                    <h3>Camiseta "Midsommar" Ed. Limitada</h3>
+                    <p>Diseño exclusivo inspirado en la película del catálogo.</p>
+                    <div class="price">$29.99</div>
+                    <a href="#" class="buy-button">Comprar Ahora</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="static/images/Poster.png" alt="Póster de Aftersun" />
+                    <h3>Póster Minimalista "Aftersun"</h3>
+                    <p>Decora tu espacio con esta emotiva obra de arte.</p>
+                    <div class="price">$11.99</div>
+                    <a href="#" class="buy-button">Comprar Ahora</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="static/images/Llavero.png" alt="Llavero de Everything Everywhere" />
+                    <h3>Llavero Multiverso</h3>
+                    <p></p>
+                    <p>Lleva un pedazo del multiverso contigo. ¡Recuerda las rocas!</p>
+                    <div class="price">$7.99</div>
+                    <a href="#" class="buy-button">Comprar Ahora</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sienna. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const sidebar = document.getElementById('sidebar');
+        const closeBtn = document.getElementById('close-btn');
+
+        menuIcon.addEventListener('click', () => {
+            sidebar.classList.add('open');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+        });
+    </script>
+</body>
+</html>

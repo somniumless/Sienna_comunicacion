@@ -79,7 +79,6 @@
       color: #333;
     }
 
-    /* Carrusel */
     .carousel {
       position: relative;
       max-width: 400px;
@@ -142,7 +141,6 @@
       right: 10px;
     }
 
-    /* Sidebar */
     .sidebar {
       position: fixed;
       left: -260px;
@@ -224,7 +222,7 @@
     <ul>
       <li><a href="#">Series de TV</a></li>
       <li><a href="#">Películas</a></li>
-      <li><a href="#">Merchandising</a></li>
+      <li><a href="merchandising.html">Merchandising</a></li>
       <li><a href="#">Reseñas</a></li>
       <li><a href="#">Membresías</a></li>
     </ul>
@@ -267,7 +265,6 @@
   </footer>
 
   <script>
-    // --- Carrusel automático con flechas ---
     const slides = document.querySelectorAll('.movie-card');
     const nextButton = document.querySelector('.arrow.right');
     const prevButton = document.querySelector('.arrow.left');
@@ -282,10 +279,8 @@
     nextButton.addEventListener('click', () => showSlide(index + 1));
     prevButton.addEventListener('click', () => showSlide(index - 1));
 
-    // Cambio automático cada 2 segundos
     setInterval(() => showSlide(index + 1), 2000);
 
-    // --- Menú lateral ---
     const menuIcon = document.getElementById('menu-icon');
     const sidebar = document.getElementById('sidebar');
     const closeBtn = document.getElementById('close-btn');

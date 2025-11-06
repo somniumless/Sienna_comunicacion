@@ -17,8 +17,8 @@
       <ul>
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="categorias.html">Categorías</a></li>
-        <li><a href="inicioSesion.html">Iniciar sesion</a></li>
-        <li><a href="Registro.html">registro</a></li>
+        <li><a href="inicioSesion.html">Iniciar Sesión</a></li>
+        <li><a href="Registro.html">Registro</a></li>
       </ul>
     </nav>
   </header>
@@ -28,7 +28,7 @@
     <ul>
       <li><a href="#">Series de TV</a></li>
       <li><a href="#">Películas</a></li>
-      <li><a href="#">Merchandising</a></li>
+      <li><a href="merchandising.html">Merchandising</a></li>
       <li><a href="#">Reseñas</a></li>
       <li><a href="#">Membresías</a></li>
     </ul>
@@ -71,7 +71,6 @@
   </footer>
 
   <script>
-    // --- Carrusel automático con flechas ---
     const slides = document.querySelectorAll('.movie-card');
     const nextButton = document.querySelector('.arrow.right');
     const prevButton = document.querySelector('.arrow.left');
@@ -86,10 +85,8 @@
     nextButton.addEventListener('click', () => showSlide(index + 1));
     prevButton.addEventListener('click', () => showSlide(index - 1));
 
-    // Cambio automático cada 2 segundos
     setInterval(() => showSlide(index + 1), 2000);
 
-    // --- Menú lateral ---
     const menuIcon = document.getElementById('menu-icon');
     const sidebar = document.getElementById('sidebar');
     const closeBtn = document.getElementById('close-btn');
