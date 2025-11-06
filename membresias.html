@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sienna - Membresías</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="static/membresias.css" /> 
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <span class="menu-icon" id="menu-icon">&#9776;</span>
+                <h1 class="logo">Sienna</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="categorias.html">Categorías</a></li>
+                <li><a href="inicioSesion.html">Iniciar Sesión</a></li>
+                <li><a href="Registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+        <button class="close-btn" id="close-btn">&times;</button>
+        <ul>
+            <li><a href="series.html">Series de TV</a></li>
+            <li><a href="peliculas.html">Películas</a></li>
+            <li><a href="merchandising.html">Merchandising</a></li>
+            <li><a href="reseñas.html">Reseñas</a></li>
+            <li><a href="membresias.html">Membresías</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <section class="pricing-header">
+            <h2>Elige tu Plan de Membresía Sienna</h2>
+            <p>Accede a contenido exclusivo, sin anuncios y en la mejor calidad.</p>
+        </section>
+
+        <section class="pricing-plans">
+            
+            <div class="plan-card">
+                <h3>Básico</h3>
+                <div class="price">
+                    <span>$8.99</span>/mes
+                </div>
+                <p class="slogan">Para disfrutar solo o en pareja.</p>
+                
+                <ul class="features">
+                    <li><i data-lucide="check-circle"></i> Calidad HD (720p)</li>
+                    <li><i data-lucide="check-circle"></i> 1 pantalla simultánea</li>
+                    <li><i data-lucide="check-circle"></i> Acceso a catálogo estándar</li>
+                    <li class="disabled"><i data-lucide="x-circle"></i> Sin descargas</li>
+                    <li class="disabled"><i data-lucide="x-circle"></i> Audio espacial</li>
+                </ul>
+                
+                <a href="#" class="signup-button">Seleccionar Básico</a>
+            </div>
+
+            <div class="plan-card featured">
+                <span class="badge">Más Popular</span>
+                <h3>Estándar</h3>
+                <div class="price">
+                    <span>$12.99</span>/mes
+                </div>
+                <p class="slogan">La mejor experiencia para toda la familia.</p>
+                
+                <ul class="features">
+                    <li><i data-lucide="check-circle"></i> Calidad Full HD (1080p)</li>
+                    <li><i data-lucide="check-circle"></i> 2 pantallas simultáneas</li>
+                    <li><i data-lucide="check-circle"></i> Descargas disponibles</li>
+                    <li><i data-lucide="check-circle"></i> Acceso a contenido exclusivo</li>
+                    <li class="disabled"><i data-lucide="x-circle"></i> Audio espacial</li>
+                </ul>
+                
+                <a href="#" class="signup-button">Seleccionar Estándar</a>
+            </div>
+
+            <div class="plan-card">
+                <h3>Premium</h3>
+                <div class="price">
+                    <span>$17.99</span>/mes
+                </div>
+                <p class="slogan">Máxima calidad y beneficios únicos.</p>
+                
+                <ul class="features">
+                    <li><i data-lucide="check-circle"></i> Calidad 4K + HDR</li>
+                    <li><i data-lucide="check-circle"></i> 4 pantallas simultáneas</li>
+                    <li><i data-lucide="check-circle"></i> Descargas disponibles</li>
+                    <li><i data-lucide="check-circle"></i> Acceso a contenido exclusivo</li>
+                    <li><i data-lucide="check-circle"></i> Audio espacial Dolby Atmos</li>
+                </ul>
+                
+                <a href="#" class="signup-button">Seleccionar Premium</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sienna. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const menuIcon = document.getElementById('menu-icon');
+        const sidebar = document.getElementById('sidebar');
+        const closeBtn = document.getElementById('close-btn');
+
+        menuIcon.addEventListener('click', () => {
+            sidebar.classList.add('open');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif; 
+    background-color: #fff;
+    color: #111;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #f9f9f9;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #8b5e3c;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: #111;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #8b5e3c;
+}
+
+.menu-icon {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #111;
+    margin-right: 15px;
+}
+
+.sidebar {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    width: 240px;
+    height: 100%;
+    background-color: #111;
+    color: #fff;
+    padding-top: 3rem;
+    transition: left 0.3s ease;
+    z-index: 2000;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 1.5rem 0;
+}
+
+.sidebar ul a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul a:hover {
+    color: #aaa;
+}
+
+main {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.pricing-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.pricing-header h2 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.pricing-header p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.pricing-plans {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+.plan-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 5px solid #ddd; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-card.featured {
+    border-top-color: #8b5e3c; 
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.plan-card:hover {
+    transform: scale(1.02);
+}
+
+.plan-card.featured:hover {
+    transform: scale(1.07);
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #8b5e3c;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.plan-card h3 {
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.price span {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #8b5e3c;
+}
+
+.slogan {
+    margin-bottom: 30px;
+    color: #999;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 30px;
+    text-align: left;
+    flex-grow: 1; 
+}
+
+.features li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.features li svg {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.features li.disabled {
+    color: #aaa;
+    text-decoration: line-through;
+}
+
+.features li.disabled svg {
+    color: #ccc;
+}
+
+.features li:not(.disabled) svg {
+    color: #00a854; 
+}
+
+.signup-button {
+    background-color: #8b5e3c;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    margin-top: auto; 
+}
+
+.signup-button:hover {
+    background-color: #6a462c;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+    color: #555;
+    font-size: 14px;
+}
